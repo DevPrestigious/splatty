@@ -2,6 +2,8 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './SplattyFunction.css';
 import PlayButton from '../buttons/PlayButton.js';
+import PauseButton from '../buttons/PauseButton.js';
+import SettingsButton from '../buttons/SettingsButton.js';
 
 // const red = '#f54e4e';
 // const green = '#4aec8c';
@@ -36,8 +38,12 @@ function SplattyFunction() {
                backgroundColor: '#3e98c7',
             })}
          />
-         <div>
-            <PlayButton />
+         <div style={{marginTop:'20px'}}>
+            <PlayButton /> 
+            <PauseButton />
+         </div>
+         <div style={{marginTop: '20px'}}>
+            <SettingsButton />
          </div>
       </div>
    );

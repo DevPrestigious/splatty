@@ -1,4 +1,4 @@
-function playButton(props) {
+function PlayButton(props) {
 
    return (
       <button {...props}>
@@ -9,4 +9,4 @@ function playButton(props) {
    )
 }
 
-export default playButton;
+export default PlayButton;

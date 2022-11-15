@@ -1,9 +1,16 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import SplattyFunction from '../components/SplattyFunction/SplattyFunction.js';
 import './Home.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+// import { findAllByTestId } from '@testing-library/react';
+import SplattyFunction from '../components/SplattyFunction/SplattyFunction.js';
+import { useState } from "react";
+import Settings from './settings/Settings.js'
 
 
 const Home: React.FC = () => {
+
+  //I'm stuck on what I need to do here with setting the initial state, I should be only seeing the application.
+  const [showSettings, setShowSettings] = useState(() => ({initialState: true}))
+
   return (
     <IonPage>
       <IonHeader>
@@ -18,7 +25,12 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
           <main> 
-            <SplattyFunction />
+          {showSettings ? (
+        <Settings />
+      ) : (
+        <SplattyFunction />
+      )}
+            
           </main>
       </IonContent>
     </IonPage>
