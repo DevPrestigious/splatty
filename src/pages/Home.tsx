@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import SplattyFunction from '../components/SplattyFunction/SplattyFunction.js';
 import './Home.css';
+
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +17,9 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+          <main> 
+            <SplattyFunction />
+          </main>
       </IonContent>
     </IonPage>
   );
