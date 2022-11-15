@@ -1,15 +1,17 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import './SplattyFunction.css';
+import './SplattyTimer.css';
 import PlayButton from '../buttons/PlayButton.js';
 import PauseButton from '../buttons/PauseButton.js';
 import SettingsButton from '../buttons/SettingsButton.js';
-
+import { useContext } from 'react';
+import SettingsContext from '../../pages/settings/SettingsContext';
 // const red = '#f54e4e';
 // const green = '#4aec8c';
 const percentage = 60;
 
-function SplattyFunction() {
+function SplattyTimer() {
+   const settingsInfo = useContext(SettingsContext);
    return (
       <div>
          <CircularProgressbar
@@ -43,10 +45,10 @@ function SplattyFunction() {
             <PauseButton />
          </div>
          <div style={{marginTop: '20px'}}>
-            <SettingsButton />
+            <SettingsButton onClick={() => settingsInfo.setShowSettings(true)}/>
          </div>
       </div>
    );
 }
 
-export default SplattyFunction;
+export default SplattyTimer;
