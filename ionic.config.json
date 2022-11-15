@@ -1,0 +1,7 @@
+{
+  "name": "splatty",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
