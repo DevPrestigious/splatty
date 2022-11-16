@@ -9,22 +9,21 @@ import SettingsContext from './settings/SettingsContext';
 
 const Home: React.FC = () => {
 
-  //I'm stuck on what I need to do here with setting the initial state, I should be only seeing the application.
   const [showSettings, setShowSettings] = useState(() => (false))
-  const [workMinutes, setWorkMinutes] = useState(4);
+  const [workMinutes, setWorkMinutes] = useState(25);
   const [breakMinutes, setBreakMinutes] = useState(5);
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Splatty</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle size="large">Splatty</IonTitle>
           </IonToolbar>
         </IonHeader>
           <main> 
