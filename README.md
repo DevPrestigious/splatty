@@ -1,5 +1,6 @@
 # splatty
 
+🍅
 Splat is the sound a tomato makes when it drops. Splatty is your companion as you make the pomdoro timer drop. 
 
 The pomdoro techqnique was invented by Italian student Francesco Cirillo in the late 80's. 
