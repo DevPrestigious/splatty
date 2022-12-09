@@ -64,7 +64,8 @@ function SplattyTimer() {
          }
          
          tick();
-      }, 1000)
+         //change the value from 10 to 1000 when finished with testing.
+      }, 10)
 
       return () => clearInterval(interval);
    }, [settingsInfo]);
@@ -105,14 +106,14 @@ function SplattyTimer() {
 
                // Colors
                pathColor: mode === 'work' ? '#f54e4e' : '#4aec8c',//`rgba(62, 152, 199, ${percentage / 100})`,
-               textColor: '#f88',
+               textColor: mode === 'work' ? '#f54e4e' : '#4aec8c',
                trailColor: '#d6d6d6',
                backgroundColor: '#3e98c7',
             })}
          />
          <div style={{marginTop:'20px'}}>
             {isPaused 
-            ? <PlayButton  onClick={() => { setIsPaused(false); isPausedRef.current = false; }} /> 
+            ? <PlayButton  onClick={() => { setIsPaused(false); isPausedRef.current = false; }} class = 'PlayButton' /> 
             : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
          </div>
          <div style={{marginTop: '20px'}}>
