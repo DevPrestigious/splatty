@@ -6,6 +6,12 @@ import PauseButton from '../buttons/PauseButton.js';
 import SettingsButton from '../buttons/SettingsButton.js';
 import { useContext , useState, useEffect, useref, useRef} from 'react';
 import SettingsContext from '../../pages/settings/SettingsContext';
+// import { BackgroundMode } from '@awesome-cordova-plugins/background-mode/ngx';
+
+
+// constructor(private backgroundMode: BackgroundMode) { 
+//   this.backgroundMode.enable();
+// }
 // const red = '#f54e4e';
 // const green = '#4aec8c';
 
@@ -65,7 +71,7 @@ function SplattyTimer() {
          
          tick();
          //change the value from 10 to 1000 when finished with testing.
-      }, 10)
+      }, 1000)
 
       return () => clearInterval(interval);
    }, [settingsInfo]);
@@ -114,7 +120,7 @@ function SplattyTimer() {
          <div style={{marginTop:'20px'}}>
             {isPaused 
             ? <PlayButton  onClick={() => { setIsPaused(false); isPausedRef.current = false; }} class = 'PlayButton' /> 
-            : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
+            : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} class = 'PlayButton'/>}
          </div>
          <div style={{marginTop: '20px'}}>
             <SettingsButton onClick={() => settingsInfo.setShowSettings(true)}/>
